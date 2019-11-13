@@ -30,7 +30,7 @@ def upload():
     thresholdVal = 0
     if request.method == 'POST':
         file = request.files['inputFile']
-        file.save('/Users/alfian/Sites/ocr-project/py-ocr/contoh.jpg')
+        file.save(os.getcwd() + '/contoh.jpg')
         thresholdVal = request.form['threshold']
 
     return redirect(url_for('index', tval=[thresholdVal]))
